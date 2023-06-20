@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Image Cropper</title>
+  <link rel="stylesheet" href="../css/bootsrap.min.css">
+  <script src="../js/jquery-3.5.slim.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootsrap.min.js"></script>
+  <link rel="stylesheet" href="../css/cropper.min.css">
+  <script src="../js/cropper.min.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>PANG CROP</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <input type="file" accept="image/*" id="imageInput" class="d-none">
+        <button type="button" class="btn btn-primary" onclick="document.getElementById('imageInput').click()">Select Image</button>
+        <img id="imagePreview" class="mt-3 img-fluid rounded-circle" src="" alt="Preview">
+      </div>
+    </div>
+  </div>
+
+
+<!-- Crop Modal -->
+<div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cropModalLabel">Crop Image</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+          <img id="modalImage" src="" alt="Crop" style="max-width: 100%; max-height: 70vh;">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="cropButton">Crop</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="../js/script.js"></script>
