@@ -15,7 +15,7 @@
           center: false,
           highlight: false,
           cropBoxMovable: true,
-          cropBoxResizable: true,
+          cropBoxResizable: false,
           toggleDragModeOnDblclick: true
         });
       }).on('hidden.bs.modal', function() {
